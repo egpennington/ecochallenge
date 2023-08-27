@@ -1,0 +1,290 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, button {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Basic styling */
+body {
+  background-color: #f9f9f9;
+  background-image: url("https://images.pexels.com/photos/4406292/pexels-photo-4406292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+.header {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+}
+
+/* Motivation banner styles */
+.motivation-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.motivation-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.motivation-cta {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.motivation-cta:hover {
+  background-color: #45a049;
+}
+
+.motivational-message {
+  color: whitesmoke;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Main content styles */
+.main {
+  padding: 20px;
+}
+
+.user-stats {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-stats p {
+  margin-bottom: 5px;
+}
+
+.game-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.challenge {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.complete-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.complete-button:hover {
+  background-color: #45a049;
+}
+
+.next-challenge-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin: auto auto;
+}
+
+.next-challenge-button:hover {
+  background-color: #2980b9;
+}
+
+.reminder {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: none;
+  margin-top: 20px;
+}
+
+/* Fireworks animation */
+.fireworks {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #f39c12;
+  border-radius: 50%;
+  animation: fireworks-animation 1s ease-out forwards;
+}
+
+@keyframes fireworks-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Ticker tape animation */
+.ticker-list {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: flex; /* Display items in a row */
+  align-items: center; /* Center items vertically */
+  animation: ticker-animation 20s linear infinite;
+  background-color: #f5f5f5;
+  opacity: 0.7;
+  padding: 3px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.ticker-title {
+  font-weight: bold;
+  margin-right: 10px;
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.ticker-item {
+  font-size: 16px;
+  color: #333;
+  white-space: nowrap; /* Prevent wrapping */
+  margin-left: 10px; /* Add spacing between items */
+  list-style-type: none; /* Remove bullet points */
+}
+
+@keyframes ticker-animation {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+/* Footer styles */
+.footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 2px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media query for screens up to 768px width (typical tablet and mobile screens) */
+@media (max-width: 768px) {
+  /* Adjust the container width and padding */
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  /* Adjust font sizes for smaller screens */
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  /* Modify the game container layout for smaller screens */
+  .game-container {
+    padding: 10px;
+  }
+
+  /* Adjust challenge item layout for smaller screens */
+  .challenge {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  /* Modify user stats layout for smaller screens */
+  .user-stats {
+    margin-bottom: 10px;
+  }
+
+  /* Style the complete and next challenge buttons for smaller screens */
+  .complete-button,
+  .next-challenge-button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  /* Adjust the motivation banner layout for smaller screens */
+  .motivation-banner {
+    padding: 15px;
+  }
+
+  /* Style the motivation CTA button for smaller screens */
+  .motivation-cta {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  /* Adjust the footer layout for smaller screens */
+  .footer {
+    padding: 5px;
+  }
+
+  /* Modify ticker title and item layout for smaller screens */
+  .ticker-title {
+    font-size: 14px;
+    margin-right: 5px;
+  }
+
+  .ticker-item {
+    font-size: 12px;
+    margin-right: 5px;
+  }
+}
